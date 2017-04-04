@@ -1,0 +1,84 @@
+---- */WRITING GROUP WITH NO BOOK/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('California Writers Club', 'Samuel Jackson', 1986, 'All Genres'); 
+
+-- */PUBLISHER WITH NO BOOK OR WRITING GROUP/*
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Oxford University Press', '22 Timber Run, Irvine, CA 92614', '686-127-1520', 'custserv.us@oup.com');
+
+
+-- */WRITING GROUP #1 WITH 1 BOOK WITH 1 PUBLISHER/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES('Dead Poets Society', 'John Keating', 1959, 'Poetry'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES('Andrews McMeel Publishing','100 Front Street Riverside, NJ 08075', '714-610-2567', 'specialsales@amuniversal.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2015, 208, 'Milk And Honey', 'Dead Poets Society', 'Andrews McMeel Publishing'); 
+
+
+-- */WRITING GROUP #2 WITH 1 BOOK WITH 1 PUBLISHER, WHERE PUBLISHER HAS APOSTROPHE/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Los Angeles Writers Group', 'Neil Perry', 2000, 'Fiction'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES('Charles Scribner''s Sons', '10 E. 53rd St. New York, NY 10022-5299', '379-438-3100', 'charlesscribnerson@css.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (1925, 135, 'Great Gatsby', 'Los Angeles Writers Group', 'Charles Scribner''s Sons'); 
+
+
+-- */WRITING GROUP #3 WITH 1 BOOK WITH 1 PUBLISHER/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Midwest Travel Writers Association', 'Knox Overstreet', 2007, 'Travel'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('The Lonely Planet', '230 Franklin Rd, Building 2B, Franklin TN 37064', '598-542-8354', 'community@lonelyplanet.com.au');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2016, 346, 'Yellowstone And Grand Teton National Parks Guide', 'Midwest Travel Writers Association', 'The Lonely Planet'); 
+
+
+-- */WRITING GROUP #4 WITH 2 BOOK WITH 2 PUBLISHER/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Women Writing The West', 'Elizabeth Ambil', 1999, 'Romance'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Bloomsbury', '1385 Broadway, Fifth Floor, New York, NY 10018 USA', '601-439-4597', 'weborders@mpsvirginia.com');
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('New American Library', '79 Garden St. Cambridge, MA 02138', '818-111-6508', 'questions@newamericanlibrary.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2000, 636, 'Harry Potter And The Goblet Of Fire', 'Women Writing The West', 'Bloomsbury'); 
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2015, 410, 'Hero', 'Women Writing The West', 'New American Library'); 
+
+
+-- */WRITING GROUP #5 WITH 2 BOOK WITH 2 PUBLISHER, WHERE 1 IS ALREADY ESTABLISHED AND WHERE THE BOOK HAS APOSTROPHE/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('49 Writers', 'Gerald Pits', 1949, 'Science Fiction'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Scholastic Corporation', '561 Broadway, New York, NY 10012', '340-144-6924', 'askus@scholastic.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (1997, 223, 'Harry Potter And The Sorcerer''s Stone', '49 Writers', 'Bloomsbury'); 
+
+
+-- */WRITING GROUP #6 WITH 1 BOOK WITH 1 PUBLISHER, WHERE PHONE NUMBER IS INTERNATIONAL/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Ink And Bean Coffee Saloon And Wordshop', 'Samuel Jackson', 1977, 'Fiction'); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Ballantine Books', '80 Strand London', '420-7010-3000', 'customerservice@ballantine.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (1953, 158, 'Fahrenheit 451', 'Ink And Bean Coffee Saloon And Wordshop', 'Ballantine Books'); 
+
+
+
+-- */WRITING GROUP #7 WITH 2 BOOK WITH 1 PUBLISHER, WHERE 1 IS ALREADY ESTABLISHED AND WRITING GROUP HAS APOSTROPHE/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Children''s Book Writers Of Los Angeles', 'Mehgan Irving', 1999, 'Children''s Literature'); 
+	
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Random House Publishing Group', '320 Front Street West, Suite 1400 Toronto', '405-859-4904', 'penguin@randomhousepublishinggroup.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (1998, 341, 'Harry Potter And The Chamber Of Secrets', 'Children''s Book Writers Of Los Angeles', 'Scholastic Corporation'); 
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (1987, 208, 'Fahrenheit 451: 50th Anniversary Edition', 'Children''s Book Writers Of Los Angeles', 'Random House Publishing Group'); 
+
+
+
+-- */WRITING GROUP #8 WITH 1 BOOK AND 1 PUBLISHER, WHERE PUBLISHER IS ALREADY ESTABLISHED AND BOOK IS ALSO READ TO ANOTHER WRITING GROUP AND PUBLISHER HAS AN APOSTROPHE/*
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES ('Coffee House Writers Group', 'Todd Anderson', 2010, 'All Genres');
+
+
+-- */WRITING GROUP #9 WITH 3 BOOK AND 1 PUBLISHER/* 
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES('Pacific Northwest Writers Association', 'Charlie Dalton', 2001, ''); 
+
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES ('Harper Collins', '195 Broadway New York, NY 10007', '771-234-5798', 'hello@harpercollins.com');
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2006, 324, 'A Series Of Unfortunate Events: The End', 'Pacific Northwest Writers Association', 'Harper Collins'); 
+
+
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2004, 323, 'A Series Of Unfortunate Events: The Grim Grotto', 'Pacific Northwest Writers Association', 'Harper Collins'); 

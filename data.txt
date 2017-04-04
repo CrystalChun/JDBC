@@ -1,0 +1,5 @@
+INSERT INTO WritingGroup (GroupName, HeadWriter, YearFormed, Subject) VALUES('Dead Poets Society', 'John Keating', 1959, 'Poetry');
+ 
+INSERT INTO book (YearPublished, NumberPages, BookTitle, GroupName, PublisherName) VALUES (2015, 208, 'Milk and Honey', 'Dead Poets Society', 'Andrews McMeel Publishing');
+ 
+INSERT INTO publisher (PublisherName, PublisherAddress, PublisherPhone, PublisherEmail) VALUES('Andrews McMeel Publishing','100 Front Street Riverside, NJ 08075', '714-610-2567', 'specialsales@amuniversal.com');

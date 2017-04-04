@@ -1,0 +1,32 @@
+CREATE TABLE WritingGroup (
+GroupName VARCHAR(40) NOT NULL,
+HeadWriter VARCHAR(20) NOT NULL,
+YearFormed SMALLINT,
+Subject VARCHAR(25),
+CONSTRAINT writingGroup_pk
+PRIMARY KEY (GroupName) );
+
+CREATE TABLE Publisher (
+PublisherName VARCHAR(30) NOT NULL,
+PublisherAddress VARCHAR(50) NOT NULL,
+PublisherPhone VARCHAR(15),
+PublisherEmail VARCHAR(40),
+CONSTRAINT publishers_pk
+PRIMARY KEY (PublisherName)); 
+
+CREATE TABLE Book (
+BookTitle VARCHAR(50) NOT NULL,
+YearPublished SMALLINT,
+NumberPages INTEGER,
+GroupName VARCHAR(40) NOT NULL,
+PublisherName VARCHAR(30) NOT NULL,
+CONSTRAINT book_pk
+PRIMARY KEY (GroupName, BookTitle),
+CONSTRAINT book_writingGroup_fk01
+FOREIGN KEY (GroupName)
+REFERENCES WritingGroup (GroupName),
+CONSTRAINT book_publisher_fk02
+FOREIGN KEY (PublisherName)
+REFERENCES Publisher (PublisherName),
+CONSTRAINT book_uk
+UNIQUE (bookTitle, publisherName));
